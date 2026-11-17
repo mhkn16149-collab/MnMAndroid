@@ -1,0 +1,41 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#F4F7FA" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="20dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="64dp"
+            android:gravity="center_vertical" android:orientation="horizontal">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="MnM" android:textColor="#101827" android:textSize="30sp" android:textStyle="bold" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="بدون إعلانات" android:textColor="#0A8F80" android:textStyle="bold" />
+        </LinearLayout>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="22dp" android:text="نزّل ملفاتك بسهولة" android:textColor="#101827"
+            android:textSize="23sp" android:textStyle="bold" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:text="الصق رابط ملف فيديو أو صوت مباشر تملك حق تنزيله." android:textColor="#64748B" android:textSize="14sp" />
+        <EditText android:id="@+id/urlInput" android:layout_width="match_parent" android:layout_height="56dp"
+            android:layout_marginTop="20dp" android:background="#FFFFFF" android:hint="https://example.com/video.mp4"
+            android:inputType="textUri" android:padding="14dp" android:singleLine="true" android:textColor="#101827" />
+        <Button android:id="@+id/downloadButton" android:layout_width="match_parent" android:layout_height="54dp"
+            android:layout_marginTop="12dp" android:backgroundTint="#10A99A" android:text="بدء التنزيل"
+            android:textAllCaps="false" android:textColor="#FFFFFF" android:textSize="16sp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="28dp" android:gravity="center_vertical" android:orientation="horizontal">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="التنزيلات" android:textColor="#101827" android:textSize="19sp" android:textStyle="bold" />
+            <Button android:id="@+id/refreshButton" android:layout_width="wrap_content" android:layout_height="44dp"
+                android:backgroundTint="#DCEFEB" android:text="تحديث" android:textAllCaps="false" android:textColor="#087F73" />
+        </LinearLayout>
+        <TextView android:id="@+id/emptyText" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" android:background="#FFFFFF" android:padding="18dp"
+            android:text="ماكو تنزيلات لحد الآن" android:textColor="#64748B" android:textSize="14sp" />
+        <ListView android:id="@+id/downloadsList" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:background="#FFFFFF" android:divider="#E8EDF2"
+            android:dividerHeight="1dp" android:visibility="gone" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="22dp" android:text="MnM إصدار 1.1 — بدون إعلانات أو أدوات تتبّع مضافة. يدعم روابط الملفات المباشرة المسموح بتنزيلها فقط."
+            android:textColor="#94A3B8" android:textSize="12sp" />
+    </LinearLayout>
+</ScrollView>
