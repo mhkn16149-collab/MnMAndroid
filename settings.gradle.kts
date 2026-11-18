@@ -1,27 +1,29 @@
 
-plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
-}
-
-android {
-    namespace = "com.mnm.downloader"
-    compileSdk = 35
-
-    defaultConfig {
-        applicationId = "com.mnm.downloader"
-        minSdk = 23
-        targetSdk = 35
-        versionCode = 3
-        versionName = "1.2"
+pluginManagement {
+    repositories {
+        google()
+        maven {
+            url = uri("https://maven-central.storage-download.googleapis.com/maven2/")
+        }
+        gradlePluginPortal()
     }
 
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
-    }
-
-    kotlinOptions {
-        jvmTarget = "17"
+    plugins {
+        id("com.android.application") version "8.7.3"
+        id("org.jetbrains.kotlin.android") version "2.0.21"
     }
 }
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        maven {
+            url = uri("https://maven-central.storage-download.googleapis.com/maven2/")
+        }
+        mavenCentral()
+    }
+}
+
+rootProject.name = "MnM"
+include(":app")
